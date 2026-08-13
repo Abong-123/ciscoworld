@@ -450,8 +450,4 @@ Repository ini adalah **kumpulan dokumentasi, konfigurasi, dan skenario** yang s
 
 <div align="center">
   
-  **"The best way to predict the future is to create it."** – *Alan Kay*
-  
-  Selamat belajar dan berkontribusi! 🚀
-  
 </div>
