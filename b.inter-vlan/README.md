@@ -205,43 +205,7 @@ SW2# copy running-config startup-config
 
 ---
 
-### 3. Konfigurasi Router (Router-on-a-stick)
-
-```cisco
-Router> enable
-Router# configure terminal
-Router(config)# hostname R1
-
-! Nonaktifkan DNS lookup
-R1(config)# no ip domain-lookup
-
-! Enkripsi password
-R1(config)# service password-encryption
-
-! ======== AKTIFKAN INTERFACE FISIK ========
-R1(config)# interface gigabitEthernet 0/0
-R1(config-if)# no shutdown
-R1(config-if)# exit
-
-! ======== SUB-INTERFACE VLAN 10 ========
-R1(config)# interface gigabitEthernet 0/0.10
-R1(config-subif)# encapsulation dot1Q 10
-R1(config-subif)# ip address 192.168.1.1 255.255.255.0
-R1(config-subif)# exit
-
-! ======== SUB-INTERFACE VLAN 20 ========
-R1(config)# interface gigabitEthernet 0/0.20
-R1(config-subif)# encapsulation dot1Q 20
-R1(config-subif)# ip address 192.168.2.1 255.255.255.0
-R1(config-subif)# exit
-
-R1(config)# end
-R1# copy running-config startup-config
-```
-
----
-
-### 4. Konfigurasi IP Address di PC
+### 3. Konfigurasi IP Address di PC
 
 **PC1 (VLAN 10 - Switch 1):**
 
@@ -318,52 +282,17 @@ Fa0/3       10,20
 
 ---
 
-### 3. Cek Sub-interface di Router
-
-```cisco
-R1# show ip interface brief
-```
-
-**Output yang diharapkan:**
-```
-Interface                  IP-Address      OK? Method Status                Protocol
-GigabitEthernet0/0         unassigned      YES unset  up                    up
-GigabitEthernet0/0.10      192.168.1.1     YES manual up                    up
-GigabitEthernet0/0.20      192.168.2.1     YES manual up                    up
-```
-
----
-
-### 4. Cek Tabel Routing Router
-
-```cisco
-R1# show ip route
-```
-
-**Output yang diharapkan:**
-```
-Codes: C - connected, S - static, R - RIP, O - OSPF, ...
-
-C    192.168.1.0/24 is directly connected, GigabitEthernet0/0.10
-C    192.168.2.0/24 is directly connected, GigabitEthernet0/0.20
-```
-
----
-
-### 5. Uji Koneksi
+### 3. Uji Koneksi
 
 **Dari PC1 (VLAN 10 - 192.168.1.10):**
 
 ```cmd
 ping 192.168.1.20    # ke PC3 (VLAN 10) - HARUS BERHASIL
-ping 192.168.2.10    # ke PC2 (VLAN 20) - HARUS BERHASIL (via router)
-ping 192.168.1.1     # ke Gateway - HARUS BERHASIL
 ```
 
 **Dari PC2 (VLAN 20 - 192.168.2.10):**
 
 ```cmd
-ping 192.168.1.10    # ke PC1 (VLAN 10) - HARUS BERHASIL (via router)
 ping 192.168.2.20    # ke PC4 (VLAN 20) - HARUS BERHASIL
 ```
 
@@ -388,13 +317,6 @@ ping 192.168.2.20    # ke PC4 (VLAN 20) - HARUS BERHASIL
 | 20 | Fa0/2 | Up | PC4 |
 | Trunk | Fa0/3 | Up | Ke Switch 1 |
 | 999 | Fa0/4-24 | Down | Blackhole |
-
-### Router
-
-| Sub-interface | VLAN | IP Address | Fungsi |
-|---------------|------|------------|--------|
-| G0/0.10 | 10 | 192.168.1.1/24 | Gateway VLAN 10 |
-| G0/0.20 | 20 | 192.168.2.1/24 | Gateway VLAN 20 |
 
 ---
 
