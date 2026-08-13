@@ -2,14 +2,14 @@
 
 <div align="center">
   
-  <!-- Cisco Badge -->
+  <!-- BADGE (Sejajar dalam satu baris) -->
   <img src="https://img.shields.io/badge/Cisco-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco">
   <img src="https://img.shields.io/badge/Cisco%20NetAcad-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco NetAcad">
+  <img src="img/badge.png" alt="My Badge" width="150">
   
-  <!-- Cisco Badge -->
-  <img src="img/badge.png" alt="Cisco Badge" width="150">
+  <br>
   
-  <!-- Cisco Logo -->
+  <!-- LOGO (Di bawah badge) -->
   <img src="img/logo.png" alt="Cisco Logo" width="200">
   
 </div>
