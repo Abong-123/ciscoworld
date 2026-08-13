@@ -6,11 +6,11 @@
   <img src="https://img.shields.io/badge/Cisco-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco">
   <img src="https://img.shields.io/badge/Cisco%20NetAcad-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco NetAcad">
   
-  <!-- My Credly Badge (Gunakan Gambar Statis) -->
-  [![My Credly Badge](https://images.credly.com/size/150x150/images/1716115a-6471-4f5f-ab2a-0bf71666c465/blob)](https://www.credly.com/badges/1716115a-6471-4f5f-ab2a0bf71666c465)
+  <!-- Cisco Badge -->
+  <img src="img/badge.png" alt="Cisco Badge" width="150">
   
-  <!-- Cisco Logo (Gunakan URL yang Valid) -->
-  ![Cisco Logo](https://www.cisco.com/c/dam/assets/swa/img/logo.png)
+  <!-- Cisco Logo -->
+  <img src="img/logo.png" alt="Cisco Logo" width="200">
   
 </div>
 
