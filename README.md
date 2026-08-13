@@ -6,12 +6,11 @@
   <img src="https://img.shields.io/badge/Cisco-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco">
   <img src="https://img.shields.io/badge/Cisco%20NetAcad-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco NetAcad">
   
-  <!-- My Badge -->
-  <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1716115a-6471-4f5f-ab2a-0bf71666c465" data-share-badge-host="https://www.credly.com"></div>
-  <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+  <!-- My Credly Badge (Gunakan Gambar Statis) -->
+  [![My Credly Badge](https://images.credly.com/size/150x150/images/1716115a-6471-4f5f-ab2a-0bf71666c465/blob)](https://www.credly.com/badges/1716115a-6471-4f5f-ab2a0bf71666c465)
   
-  <!-- Cisco Logo -->
-  <img src="https://www.cisco.com/c/dam/en_us/about/ac49/ac0/images/logo-primary.png" alt="Cisco Logo" width="200">
+  <!-- Cisco Logo (Gunakan URL yang Valid) -->
+  ![Cisco Logo](https://www.cisco.com/c/dam/assets/swa/img/logo.png)
   
 </div>
 
@@ -232,6 +231,7 @@ access-list 10 permit 192.168.1.0 0.0.0.255
 
 ! Mengizinkan hanya IP 192.168.1.10
 access-list 10 permit 192.168.1.10 0.0.0.0
+```
 
 
 ## 📏 VLSM (Variable Length Subnet Mask)
